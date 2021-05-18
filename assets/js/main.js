@@ -18,16 +18,30 @@ const app = new Vue({
     methods:{
         prev(){
             if(this.counter === 0){
-                return this.counter = this.images.lenght -1
+                return this.counter = this.images.length -1
             }
             return this.counter -= 1
         },
         next(){
-            if(this.counter === this.images.lenght -1){
+            if(this.counter === this.images.length -1){
                 return this.counter = 0
             }
             return this.counter += 1
         }
 
-    }   
+    },
+    
+    mounted(){
+        document.addEventListener('keyup', (event) => {
+            console.log(event.key);
+        })
+    }
+    
+    
 })
+
+
+function keyup(){
+    alert('funziona')
+}
+
