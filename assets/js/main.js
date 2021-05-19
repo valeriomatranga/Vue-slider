@@ -4,7 +4,6 @@ const app = new Vue({
 
     data:{
         counter: 0,
-        circle: "red",
         images:[
             "./assets/img/983332.jpg",
             "./assets/img/1185171.png",
@@ -14,7 +13,7 @@ const app = new Vue({
             "./assets/img/demon.png",
             "./assets/img/sword.jpg"
         ],
-
+        
     },
 
     methods:{
@@ -26,12 +25,14 @@ const app = new Vue({
             return this.counter -= 1
         },
         next(){
-            if(this.counter === this.images.length -1){
+            if(this.counter === this.images.length -1 ){
                 return this.counter = 0
             }
             return this.counter += 1
         },
-
+        selectImage(index){
+            return this.counter = index
+        }
 
     },
     
